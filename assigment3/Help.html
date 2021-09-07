@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RTO-Help</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+	<div>
+		<div class="p-3 mb-2 text-light bg-dark row sticky-top" style="background-color: transparent;rgba(255,0,.4) ">
+				<div class="col">
+					<img src="data:image/jpeg;base64,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" class="mr-3 sm rounded-circle " style="width: 100px">Gujarat(english)
+
+				</div>
+				<div class=" row text-center" style="text-decoration: none;">
+					<div class="col">
+						<img src="E:\sem 3\assigment3\icon.png"></img><br>
+						<a href="Question bank.html">Question banks</a>
+					</div>
+					<div class="col">
+						<img src="icon3.png"><br>
+						<a href="Exam.html">Exam</a>
+					</div>
+					<div class="col">
+						<img src="icon2.png"><br>
+						<a href="Help.html">Help</a>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="primary-content-section" class="primary-txt" style="height: auto !important;">
+                    <div class="row btm-pad" style="height: auto !important;">
+                        <div class="col-md-12" style="height: auto !important; min-height: 0px !important;">
+                            <p>To drive two-wheeler or four-wheeler legally on the roads, an Indian driving licence is mandatory. However, a permanent driving license cannot be received right away. There is a separate process for it.</p>
+<p>An individual who wants to drive any type of motor vehicle in India has to get his/her learner's license first. A learner’s license is issued for learning. After a month of the issued learner’s license, the person has to appear for the test in front of an RTO authority, who upon proper examination, will declare if he/she has passed the exam or not.</p>
+<div class="clearfix"></div>
+<h2>Brief on Driving Licence India</h2>
+<picture> <source media="(max-width:1200px)" srcset="/images/india/infographic/driving-licence.webp"> <img class="img-responsive" src="/images/india/infographic/driving-licence.webp" width="280" height="304" title="Driving Licence" alt="Driving Licence" loading="lazy" align="right"> </picture>
+<script type="application/ld+json">
+   {
+     "@context": "https://schema.org/",
+     "@type": "ImageObject",
+     "contentUrl": "https://www.bankbazaar.com/images/india/infographic/driving-licence.webp",
+     "license": "https://www.bankbazaar.com/",
+     "acquireLicensePage": "https://www.bankbazaar.com/driving-licence.html"
+  }
+</script>
+<p>A driving licence is basically an official document issued by the Government of India, permitting individuals to operate or drive a motorised vehicle such as a car, motorbike, truck, bus, etc., on a public road, without any supervision. In India, a driving licence is issued by the Regional Transport Authority (RTA) or Regional Transport Office (RTO) of that particular state. The Motor Vehicles Act of 1988 states that no individual without the Driving licence is authorized to drive a motor vehicle in a public place.</p>
+<p>Hence, if you wish to drive a motor vehicle like car or scooter on roads, you must first hold a valid driving licence in India. If you are practising to drive a vehicle, you must first get a Learners licence which will act as a provisional licence and then must take a test to qualify for getting a Driving licence. With the advent of online facilities that allow users to apply for a Driving licence from the comfort of their homes, getting a driving licence has become an easy task.</p>
+<h2>Types of DL in India</h2>
+<p>Depending on the type of vehicle a person uses, he or she can get a license for it. However, the eligibility requirements for every vehicle type will vary. The list of categories for which the driving license can be applied for are as follows:</p>
+<div class="hungry-table nb-table">
+   <table class="table table-bordered table-striped">
+      <thead>
+         <tr>
+            <th class="table-header">
+               <strong>Vehicle Type</strong>
+            </th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>Motorcycles with engine capacity of 50 cc or less than 50 cc</td>
+         </tr>
+         <tr>
+            <td>Motorcycles with gear, motorcycles with a capacity of 50 cc or more, Light Motor Vehicles (LMVs) including cars</td>
+         </tr>
+         <tr>
+            <td>All Motorcycles types including Motorcycle with gear</td>
+         </tr>
+         <tr>
+            <td>
+               Motorcycles of any cc but with no gears - including scooters and mopeds
+            </td>
+         </tr>
+         <tr>
+            <td>Light Motor Vehicle for non transport purposes</td>
+         </tr>
+         <tr>
+            <td>Light Motor Vehicle intended for commercial purposes</td>
+         </tr>
+         <tr>
+            <td>Heavy Passenger Motor Vehicle (also referred to as All India driving permit for trucks and cars or open licence)</td>
+         </tr>
+         <tr>
+            <td>Heavy Goods Motor Vehicle</td>
+         </tr>
+         <tr>
+            <td>Candidates holding a heavy vehicle driving licence can apply for heavy trailer licence</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+<h2>Eligibility for Driving licence in India</h2>
+<p>The eligibility for driving licence in India depends on the class of vehicle and the type of driving licence. The eligibility criteria for different permanent Driving licence types in India are given below.</p>
+<div class="hungry-table nb-table">
+   <table class="table table-bordered table-striped">
+      <thead>
+         <tr>
+            <th class="table-header">
+               <strong>Type of Permanent Driving licence</strong>
+            </th>
+            <th class="table-header">
+               <strong>Eligibility Criteria</strong>
+            </th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>Motorcycles without gear (with a capacity of up to 50 cc)</td>
+            <td>The applicant must be at least 16 years old and must have the consent of parent or guardian if he is less than 18 years old.</td>
+         </tr>
+         <tr>
+            <td>Motorcycles with gear</td>
+            <td>The applicant should be at least 18 years old.</td>
+         </tr>
+         <tr>
+            <td>Commercial Heavy Vehicles and Transport Vehicles</td>
+            <td>The applicant should have completed 8th standard. The applicant must be at least 18 years old (in some states, the minimum age limit is 20 years).</td>
+         </tr>
+         <tr>
+            <td>General Requirement</td>
+            <td>The applicant must be conversant with traffic regulations and rules. The applicant must have valid age proof and address proof documents.</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+<div class="row btm-pad" id="Documents_Required_to_get_a_Driving_licence_in_India">
+   <div class="col-md-12">
+      <ul class="list-group">
+         <li class="list-group-item list-group-orange" style="text-align: right;">
+            Know more: 
+            <a href="/driving-licence/learners-license.html" target="_blank" title="Apply for LL">How to Apply for LL</a>
+         </li>
+      </ul>
+   </div>
+</div>
+<h2>Document Required for Driving licence</h2>
+<p>To ensure that there is no delay in the application process, the documents that are to be submitted have to be valid and correct. The list of documents required for driving licence are:</p>
+<ul>
+   <li>Age Proof (any one of the below given documents)</li>
+   <ol>
+      <li>Birth Certificate</li>
+      <li>PAN Card</li>
+      <li>Passport</li>
+      <li>10th Class mark sheet</li>
+      <li>Transfer certificate from any school for any class with date of birth printed on it.</li>
+   </ol>
+   <li>
+      <strong>Proof of Address required for DL:</strong>
+      <ul>
+         <li>
+            <strong>Permanent Proof of address</strong> (any one from the following):
+            <ul>
+               <li>Passport</li>
+               <li>
+                  Aadhaar Card
+               </li>
+               <li>Self-owned house agreement</li>
+               <li>Electricity bill (issued in applicants name)</li>
+               <li>LIC bond</li>
+               <li>Voters ID Card</li>
+               <li>Ration card</li>
+            </ul>
+         </li>
+         <li>
+            <strong>Current Proof of address</strong> (any one from the following):
+            <ul>
+               <li>Rental agreement and electricity bill</li>
+               <li>Rental agreement and LPG bill</li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li>
+      <strong>Other Requirements for Driving Licence:</strong>
+      <ul>
+         <li>
+            Duly filled application form (to get the application form for driving licence, visit the nearest RTO or download it from the online portal for your state) 
+         </li>
+         <li>6 passport sized photographs (when applying for Learners Licence)</li>
+         <li>1 passport sized photograph (when applying for driving licence)</li>
+         <li>Application Fees </li>
+         <li>If you are staying in other cities, as current address proof, you can present the rental agreement with one recent utility bill copy which can be gas bill or electric bill. </li>
+         <li>Medical Certificate - Form 1 A and 1 which is to be issued by a certified Government doctor</li>
+         <li>For all applicants over the age of 40 years, a Medical certificate is mandatory.</li>
+      </ul>
+   </li>
+</ul>
+<h2>How To Apply For Driving Licence Online?</h2>
+<p>Applying for a driving licence online is a simple process and involves only a few steps. Go to the official Sarathi website of the Road Transport &amp; Highways Ministry. From the column named “Sarathi Services,” select “New Driving Licence.” You will be redirected to a new web page, which will have all the details about it. Read through the instructions. Download the form and fill all the required information.</p>
+<h3>Process To Fill The Driving Licence Application Form Online</h3>
+<p>The process for filling out an online application for a 
+   <a href="/driving-licence/learners-license.html" target="_blank">Learner’s Licence</a> or Driving Licence is as follows:
+</p>
+<ul>
+   <li>Visit the Sarathi website and download the driving licence application form.</li>
+   <li>Fill in the form as per the instructions provided on the screen and click on ‘Submit’.</li>
+   <li>In the case of minor applicants, the form is to be printed out and Part D is to be filled out and signed by the parent/guardian at the nearest RTO.</li>
+   <li>Upload the documents to be submitted along with the application form (proof of age, proof of address, learner’s licence number).</li>
+   <li>A Web Application Number will be generated after submission, which can be used to track the status of the application.</li>
+   <li>Once the application has been processed, a notification will be sent via SMS.</li>
+</ul>
+<h2>How to Apply for a Driving licence in RTO or Offline in India?</h2>
+<p>The procedure to apply for a Driving licence in India is very simple and straightforward. The steps given below will help you understand how to apply for a Driving licence offline.</p>
+<ul>
+   <li><strong>Step 1:</strong> The applicant has to obtain a Form 4 which is the application form for motor vehicle driving licence in india. The Form can be downloaded from the state transport website. Alternatively, the customer can also visit the nearest RTO to procure Form 4.</li>
+   <li><strong>Step 2:</strong> Completely fill the application form and submit it with other documents like age proof and address proof at the RTO in the jurisdiction in which you live. Also, schedule a slot for Driving licence test at the RTO and pay the fee for taking the test.</li>
+   <li><strong>Step 3:</strong> Be present at your Driving licence test center on the specified time and date. Once you clear the test, your driving licence will be awarded on the spot or will be sent to your registered address.</li>
+   <li><strong>Step 4:</strong> Also, if you are taking driving lesson from a Driving school, the school will help you apply for a driving licence.</li>
+</ul>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "HowTo",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.bankbazaar.com/images/india/infographic/driving-licence.webp"
+    },
+    "name": "How to Apply for a Driving licence in RTO or Offline in India?",
+    "description": "Driving Licence - Know different types of Driving license (DL) & Apply Online or through RTO in India for DL.",
+    "totalTime": "PT1M",
+    "supply": {
+        "@type": "HowToSupply",
+        "name": "Internet Conection"
+    },
+    "tool": {
+        "@type": "HowToTool",
+        "name": "Mobile or Computer"
+    },
+    "step": [
+        {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Step 1",
+            "text": "The applicant has to obtain a Form 4 which is the application form for motor vehicle driving licence in india. The Form can be downloaded from the state transport website. Alternatively, the customer can also visit the nearest RTO to procure Form 4.",
+            "image": "https://www.bankbazaar.com/images/india/infographic/driving-licence.webp",
+            "url": "https://www.bankbazaar.com/driving-licence.html#step1"
+        },
+        {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Step 2",
+            "text": "Completely fill the application form and submit it with other documents like age proof and address proof at the RTO in the jurisdiction in which you live. Also, schedule a slot for Driving licence test at the RTO and pay the fee for taking the test.",
+            "image": "https://www.bankbazaar.com/images/india/infographic/driving-licence.webp",
+            "url": "https://www.bankbazaar.com/driving-licence.html#step2"
+        },
+        {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Step 3",
+            "text": "Be present at your Driving licence test center on the specified time and date. Once you clear the test, your driving licence will be awarded on the spot or will be sent to your registered address.",
+            "image": "https://www.bankbazaar.com/images/india/infographic/driving-licence.webp",
+            "url": "https://www.bankbazaar.com/driving-licence.html#step3"
+        },
+        {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Step 4",
+            "text": "Also, if you are taking driving lesson from a Driving school, the school will help you apply for a driving licence.",
+            "image": "https://www.bankbazaar.com/images/india/infographic/driving-licence.webp",
+            "url": "https://www.bankbazaar.com/driving-licence.html#step4"
+        }
+        
+    ]
+}
+</script>
+<h2>Format of Driving Licence in India:</h2>
+<p>The driving licence in India has a format. Let us understand this particular format by using an appropriate example:</p>
+<p>Let us say that you stay in Bangalore and the vehicle you own has the licence plate number KA-01-2009-0004558 (reference use only).</p>
+<ul>
+   <li>The first two characters KA indicate the state where the vehicle is registered. In this example, it is Karnataka.</li>
+   <li>01 is the city code.</li>
+   <li>2009 is the year when the licence was printed and given to the user.</li>
+   <li>The following digits form the unique identification number for the user.</li>
+</ul>
+<style scoped="">
+.ct-img-web-banner{margin-bottom:10px}.ct-img-web-banner img{max-width:900px}.ct-img-web-banner .show-desktop{display:block}.ct-img-web-banner .show-mobile{display:none}@media only screen and (max-width:1024px){.ct-img-web-banner img{max-width:720px}}@media only screen and (max-width:767px){.ct-img-web-banner .show-desktop{display:none}.ct-img-web-banner .show-mobile{display:block}.ct-img-web-banner img{max-width:340px;margin:0 auto}}@media only screen and (max-width:320px){.ct-img-web-banner img{max-width:300px}}
+</style>
+<div class="ct-img-web-banner">
+<a href="/credit-score.html?variant=slide&amp;WT.mc_id=CROSS_SELL_IL_DRIVING_LICENCE&amp;utm_source=bb&amp;utm_medium=seo&amp;utm_campaign=CROSS_SELL_IL_DRIVING_LICENCE">
+<img src="/images/india/infographic/Web-In-line-CT-banner-driving-content02-desktop-1-img.gif" class="show-desktop" alt="Credit Score" title="Credit Score" width="650" height="80" loading="lazy">
+<img src="/images/india/infographic/Mobile-In-line-CT-banner-driving-content02-mobile-1-img.gif" class="show-mobile" alt="Credit Score" title="Credit Score" width="340" height="128" loading="lazy">
+</a>
+</div>
+<h2>Test Procedure for Driving licence in India</h2>
+<p>You must undergo a driving licence which will test your driving skills and knowledge on road rules &amp; signals and pass the test to get your driving licence. Here are some of the important points regarding the driving licence test procedure in India.</p>
+<ul>
+   <li>You can apply for a permanent Driving licence after 30 days from the date of issuance of Learners licence. The application for permanent Driving licence must be filed within 180 days from the issue date of Learners licence.</li>
+   <li>Submit all relevant documents (including driving licence test slot booking slip if you have booked the slot online) and pay the fees for taking the Driving licence test at the designated counter. Get the receipt and approach the allotted track cabin to take the test.</li>
+   <li>You must be present in person for the Driving licence test at least an hour before the allotted time. You will have to take a test before or along with the Motor Vehicle Inspector (MVI) at the designated track.</li>
+   <li>Different states have different test tracks and procedures. Generally, for two wheelers, you will be asked to drive a two wheeler in a path designed in shape of number 8. Also, the Motor Vehicle Inspector will check if you are using indicators and relevant hand signals while driving. You will have to trace the shape of number 8 in your vehicle without your legs touching the ground.</li>
+   <li>For a four wheeler driving licence, the Motor Vehicle Inspector will ask you to ride the car in a track and will note your skills. You must show proper hand signals, use the indicator and apply brakes wherever necessary. Also, shift the gears smoothly and use side &amp; rear view mirrors while driving.</li>
+</ul>
+<h2>How long does it take to get the Driving Licence after passing the test?</h2>
+<p>To avail a 
+   <a href="/driving-licence/dl-test.html" target="_blank">driving licence test</a>, you must follow a certain procedure:
+</p>
+<ul>
+   <li>You must fill the online form and take an appointment at the RTO office for your learning test. A few multiple choice questions will be asked during your test at the RTO. You will find a wide range of questions on the website, which might be asked during your learning licence test. Once you pass that test, you will receive a receipt. With this receipt, you will have to collect your learning licence.</li>
+   <li>After one month has passed from the date of issuance of your learning licence, you will have to take an appointment for a driving test. During this test, the questions that will be asked will be related to the vehicle for which you are getting the licence (two wheeler/four wheeler). Once you pass this exam too, you will get a receipt. This particular receipt will serve as your driving licence till the time you receive the real driving licence by speed post.</li>
+</ul>
+<h2>What to do if your Driving Licence is Lost?</h2>
+<p>Every driver in India needs to have a driving licence. Without this document you are not allowed to drive in the country. If you lose your driving licence, you will have to apply for a duplicate one to be able to drive.</p>
+<h2>Things to do if you lost your Driving Licence:</h2>
+<ul>
+   <li>Go to the police station that has jurisdiction over the area where you lose your driving licence. </li>
+   <li>Lodge a complaint and make sure you get a copy of the First Information Report (FIR).</li>
+   <li>Visit the Notary office to get an affidavit on a stamped paper. The affidavit will act as a proof that you took an oath before the concerned officer (executive magistrate/notary public/first class judicial magistrate) that your licence is lost. </li>
+</ul>
+<p>You will have to pay a small fee for the notary service and the stamped paper.</p>
+<h2>How Does The International Driving Permit In India Works?</h2>
+<p>An international Driving licence is issued to a resident Indian who holds a valid Indian Driving licence. An international driving permit (IDP) allows an Indian citizen to drive motor vehicle in a foreign country. The international driving permit (IDP) has multiple language translation of the existing driving licence and is similar to a passport in appearance. Though the process for obtaining an IDP varies from state to state, the general process flow is mentioned below.</p>
+<p>The application process for an international driving licence varies from state to state. Do get in touch with the nearest RTO or your State Transport department to know the complete application process and the list of documents required.</p>
+<h2>Why do you need a Driving licence in India?</h2>
+<p>Apart from the fact that a person must hold a driving licence to legally drive a motor vehicle in India, the uses of a driving licence are many. Here are some of the reasons as to why you need a driving licence in India.</p>
+<ul>
+   <li>
+      <strong>Important Document of Personal Identification</strong>
+      <p>Often, while travelling or visiting a pub, you are asked to display an ID. At this point, most of us conveniently reach into our wallets to pull our driving licences. So, another rather important purpose which a driving licence fulfils is as a widely recognized form of personal identification. Among other documents like passports, PAN cards, Voter ID Cards, Aadhar Cards, driving licences too are a widely accepted form of personal identification.</p>
+   </li>
+   <li>
+      <strong>Make Commuting Easier</strong>
+      <p>Commuting these days is an extremely stressful activity. Using public transport might not be everyones cup of tea. Also, owning a vehicle provides you with the freedom of being mobile, as and when you need. Considering that, if you wish to purchase a car or motorbike to commute, you will need to obtain a driving licence prior to doing so.</p>
+   </li>
+   <li>
+      <strong>Compulsory Legal Requirement</strong>
+      <p>If you wish to drive, in India or even abroad, you are required to hold a valid driving licence to do so. A driving licence is an important document indicating your ability to operate or drive a motorised vehicle.</p>
+   </li>
+</ul>
+<h2>Driving Licence Valid As ID Proof For Exchanging Old Notes</h2>
+<p>After the PM announced a ban on Rs.500 and Rs.1000 notes, people have been rushing to the banks to exchange their old notes. When you go to exchange your old Rs.500 and Rs.1000 notes, you can show your Driving Licence as identity proof. Please note that the original document has to be shown at the counter while exchanging the notes.</p>
+<h2>Know more about Driving Licence</h2>
+<h3>How to apply for a Driving Licence online?</h3>
+<p>To drive in India, one must have a driving licence (DL). Earlier, people had to visit the RTO of their area and stand in queues to apply for a DL. Now, people can apply online on the website of the RTO (Regional Transport Office) of their state or Union Territory. Driving licence is also important because it is considered a valid identity proof in India. The online application process is easy, quick and people can book appointments for their driving test online. To apply, applicants have to fill Form 9, which is divided into 5 categories and submit it along with the required documents. Before applying for a driving licence, applicants have to apply for a learner’s licence, which they can do online on the Sarathi website.</p>
+<div class="pull-right">
+   <p>
+      <strong>Check for How to : 
+         <a href="/driving-licence/how-to-apply-dl-online.html" target="_blank">Apply for a Driving Licence online</a>
+      </strong>
+   </p>
+</div>
+<div class="clearfix"></div>
+<h3>Duplicate Driving Licence in India</h3>
+<p>Driving licence (DL) is an important document in India because it gives citizens the permission to drive and at the same time acts as a valid identity proof. If people lose their driving licence, they can easily get a duplicate DL from the RTO (Regional Transport Office) that issued it. People can apply for a duplicate DL online or directly at the RTO. To apply, they have to fill the application form for availing a duplicate DL and submit it at the RTO along with the required documents.</p>
+<div class="pull-right">
+   <p>
+      <strong>Read on to find more about : 
+         <a href="/driving-licence/duplicate-driving-licence.html" target="_blank">Duplicate Driving Licence in India</a>
+      </strong>
+   </p>
+</div>
+<div class="clearfix"></div>
+<h3>Traffic Fines: Offences and Penalties in India</h3>
+<p>In India, when people violate traffic rules, they will be penalised for the same. The road rules in India came in effect from 1989 under the name ‘Rules of the Road Regulation’. It is compulsory for every driver in India to follow these rules. Violating or breaking them is a serious offence as per the traffic rules and traffic fines and the Motor Vehicle Act of India. Get more information about the offences related to documents, driving, road marking, vehicle number plates, horn, etc., and penalties charged for them.</p>
+<div class="pull-right">
+   <p>
+      <strong>Find Out :
+         <a href="/driving-licence/traffic-fines.html" target="_blank">Traffic Rules &amp; Regulations in India</a>
+      </strong>
+   </p>
+</div>
+<div class="clearfix"></div>
+<h3>Learner’s licence</h3>
+<p>If you want to get a driving licence in India, you have to first apply for a learner’s licence. It is a provisional licence that is issued by the Regional Transport Office (RTO). To get this licence, people must have an idea about road rules and pass the online test. Learner’s licence is issued by the RTO on the basis of vehicle class. To apply for this licence, people have to fill up the application form, which is divided into two sections and submit it along with the required documents and fees. People can apply for a learner’s licence online on the RTO websites.</p>
+<div class="pull-right">
+   <p>
+      <strong>Get more details on : 
+         <a href="/driving-licence/learners-license.html" target="_blank">Learning Licence</a>
+      </strong>
+   </p>
+</div>
+<div class="clearfix"></div>
+<h3>Driving Licence Test</h3>
+<p>When you apply for a driving licence (DL) in India, you will be ask to appear for a driving test. The result of this test will decide if you will get a driving licence or not. People can book an appointment for driving licence test on the RTO website. While booking the appointment, they can choose a slot that is suitable for them from the list of available time slots. For the test, the tracks vary depending on the type of vehicle and drivers are judged on various parameters. If drivers fail the test, they will have to reappear for it.</p>
+<h3>Driving Licence Fees in India</h3>
+<p>
+   <strong>The fee structure for a learner’s licence include:</strong>
+</p>
+<ul>
+   <li>Fee for Form 3 – Rs.30.</li>
+   <li>Fee for Form 6 – Rs.40.</li>
+   <li>The road safety cess fee – Rs.50.</li>
+</ul>
+<p>
+   <strong>The fee structure for a permanent driving licence include:</strong>
+</p>
+<ul>
+   <li>The driving licence test fee – Rs.100.</li>
+   <li>Fee for form 7 (or smart card) – Rs.200.</li>
+   <li>The driving licence grant fee – Rs.40.</li>
+   <li>The road safety cess for a license for 2-wheeler, with/without gear – Rs.100.</li>
+   <li>The road safety cess for a license for light motor vehicles (non-transport) – Rs.150.</li>
+   <li>The road safety cess for a license for light motor vehicles (transport) – Rs.200.</li>
+   <li>The road safety cess for a license for medium and heavy motor vehicles– Rs.500.</li>
+</ul>
+<p>
+   <strong>The fee for international driving licence include:</strong>
+</p>
+<ul>
+   <li>The issue of the international driving licence – Rs.500.</li>
+</ul>
+<h3>How To Check The Driving Licence Status?</h3>
+<ul>
+   <li>Go to the official website of the Ministry of Road Transport &amp; Highways.</li>
+   <li>On the portal, enter your application number and date of birth. Click on the submit button.</li>
+   <li>Now, the driver licence status is displayed.</li>
+</ul>
+<p>Note: It takes a maximum of 3 weeks for the licence to be delivered by post. Hence, make sure to have your ID proof handy while receiving it because the authoritative person will ask for it before handing over it to you.</p>
+<h2>Driving Licence FAQs</h2>
+<ol>
+   <li><strong>Can I reapply for a driving license in case I fail the driving test?</strong>
+      <p>Yes, you can reapply for a driving license in case you fail the driving test. You can take the test again after 7 days.</p></li>
+      <li><strong>What documents do I need to submit to apply for a driving license? </strong>
+      <p>The below-mentioned documents must be submitted when you apply for a driving license:</p> 
+<ul><li>Forms 1, 1A, 2, and 3</li>
+<li>Age proof</li>
+<li>Address proof</li></ul>
+    </li>
+
+      <li><strong>How long is a driving license valid for? </strong>
+      <p>In the case of private vehicles, a driving license is valid for 20 years. However, the driving license is valid for 3 years in the case of commercial vehicles. </p></li>
+      <li><strong>What is the procedure to apply for a driving license?</strong>
+      <p>You will need to visit the nearest RTO and submit the application form and the relevant documents to apply for a driving license.</p></li>
+      <li><strong>How long do I have to renew the driving license? </strong>
+      <p>From the date of expiry, you must renew the license within 5 years. However, it is illegal to drive with a license that has expired.</p></li>
+    <li><strong>What should I do to start the driving license application process?</strong>
+      <p>Initially, you must apply for a learner’s license before submitting an application for a driving license. You must have a learner’s license for at least 30 days before you applying for a driver’s license. The application form for a driver’s license can be submitted at the RTO or online.</p></li>
+      <li><strong>Is the driving license valid across the country?</strong>
+      <p>Yes, the driving license is valid across the country.</p></li>
+      <li><strong>Is it mandatory to provide a medical certificate to apply for a driving license?</strong>
+      <p>Individuals who are below the age of 50 years need not provide a medical certificate. However, individuals who are using a vehicle for transport purposes must provide a medical certificate.</p></li>
+      <li><strong>Where can I apply for a learner’s license?</strong>
+        <p>You can visit the nearest RTO or by visiting the official website of Sarathi to apply for a learner’s license.</p></li>
+</ol>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Can I reapply for a driving license in case I fail the driving test?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, you can reapply for a driving license in case you fail the driving test. You can take the test again after 7 days."
+    }
+  },{
+    "@type": "Question",
+    "name": "What documents do I need to submit to apply for a driving license?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The below-mentioned documents must be submitted when you apply for a driving license: 
+    Forms 1, 1A, 2, and 3 
+    Age proof 
+    Address proof"
+    }
+  },{
+    "@type": "Question",
+    "name": "How long is a driving license valid for?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In the case of private vehicles, a driving license is valid for 20 years. However, the driving license is valid for 3 years in the case of commercial vehicles."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the procedure to apply for a driving license?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You will need to visit the nearest RTO and submit the application form and the relevant documents to apply for a driving license."
+    }
+  },{
+    "@type": "Question",
+    "name": "How long do I have to renew the driving license?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "From the date of expiry, you must renew the license within 5 years. However, it is illegal to drive with a license that has expired."
+    }
+  },{
+    "@type": "Question",
+    "name": "What should I do to start the driving license application process?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Initially, you must apply for a learner’s license before submitting an application for a driving license. You must have a learner’s license for at least 30 days before you applying for a driver’s license. The application form for a driver’s license can be submitted at the RTO or online."
+    }
+  },{
+    "@type": "Question",
+    "name": "Is the driving license valid across the country?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, the driving license is valid across the country."
+    }
+  },{
+    "@type": "Question",
+    "name": "Is it mandatory to provide a medical certificate to apply for a driving license?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Individuals who are below the age of 50 years need not provide a medical certificate. However, individuals who are using a vehicle for transport purposes must provide a medical certificate."
+    }
+  },{
+    "@type": "Question",
+    "name": "Where can I apply for a learner’s license?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You can visit the nearest RTO or by visiting the official website of Sarathi to apply for a learner’s license."
+    }
+  }]
+}
+</script>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Driving-Licence_SEO_Rsp -->
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-3557509211955107" data-ad-slot="1959925720" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_0_expand" style="border: none; height: 280px; width: 857px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_0_anchor" style="border: none; height: 280px; width: 857px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:857px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="857" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-3557509211955107&amp;output=html&amp;h=280&amp;slotname=1959925720&amp;adk=1518831567&amp;adf=608050952&amp;pi=t.ma~as.1959925720&amp;w=857&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1630991909&amp;rafmt=1&amp;psa=1&amp;format=857x280&amp;url=https%3A%2F%2Fwww.bankbazaar.com%2Fdriving-licence.html&amp;flash=0&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;adsid=ChEI8PjWiQYQ2YORiIyUgeSEARJIAK7B_1dErpK49yfqKzzk1LRM8SDYIMwPV2siUAaYnQTFhXRFGZYIMvDjYywQf7ZdIOMHfQPrOEP6mW5k-7zyC6lcfaciyFru&amp;uach=WyJXaW5kb3dzIiwiNi4xLjAiLCJ4ODYiLCIiLCI5My4wLjQ1NzcuNjMiLFtdLG51bGwsbnVsbCwiMzIiXQ..&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hdHRlc3RhdGlvbi5hbmRyb2lkLmNvbSIsInN0YXRlIjo3fV0.&amp;dt=1630991891955&amp;bpp=19&amp;bdt=1102&amp;idt=176&amp;shv=r20210831&amp;mjsv=m202109010101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D35790beda69e056b-22416ba08dcb00ff%3AT%3D1630987222%3ART%3D1630987222%3AS%3DALNI_MabvwaAbQKmX10g1Dkz8VMESSplDg&amp;prev_fmts=120x600%2C120x600%2C0x0%2C160x600&amp;nras=1&amp;correlator=6072772049321&amp;frm=20&amp;pv=1&amp;ga_vid=1003813486.1630987220&amp;ga_sid=1630991892&amp;ga_hid=1575512777&amp;ga_fc=0&amp;u_tz=330&amp;u_his=2&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=363&amp;ady=8680&amp;biw=1349&amp;bih=625&amp;scr_x=0&amp;scr_y=6184&amp;eid=21066433%2C31060048%2C21065724%2C21067496%2C31062296&amp;oid=3&amp;psts=AGkb-H84Tg_8agcRN7OQX7OfEBCNp0P_zDOz4iHcu45O4L9121H0WI982SFFv4OXkfQlk9nzSy_rMHoZzMM%2CAGkb-H_AZ04p1zg6vudWjfT7tHk1z6Onf2EEdbIIaNhvxDXMjwtnNS5zl1c52nTlE5GO32iVZWiQVv5phAI0%2CAGkb-H922LKZLoR-pARBXkuj1_fT2yNWnTJ5VsR6cKzf9FbOHR4h9CcqN8sBYFuSpiQqlWaNt1d-MQU4YgwHTA&amp;pvsid=2846048134912710&amp;pem=757&amp;ref=https%3A%2F%2Fwww.bankbazaar.com%2Fdriving-licence%2Flearning-licence-test-questions.html&amp;eae=0&amp;fc=896&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C625&amp;vis=1&amp;rsz=o%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;jar=2021-09-07-04&amp;ifi=1&amp;uci=a!1&amp;btvi=2&amp;fsb=1&amp;xpc=u12NockG5u&amp;p=https%3A//www.bankbazaar.com&amp;dtd=17889" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" allow="attribution-reporting" data-google-container-id="a!1" data-google-query-id="CLfvr6yO7PICFVQOvQodNYgDLg" data-load-complete="true"></iframe></ins></ins></ins>
+</div>
+                    </div>
+                </div>
+			</div>
+
+
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="p-3 mb-2 text-light bg-dark row" style="background-color: black">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div class="col" style="margin: 60px">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					&copyRto2021;
+					<p> 
+					This test is only for public awareness.
+					User is adviced to check every information by transpotarion organisation. 
+					</p>
+				</div>
+				<div class="col text-right" style="margin: 60px">
+				<br>
+				<br>
+				<p><a href="home.html"class="text-light bg-dark">Home</a><br>
+					<br>
+				<a href="Exam.html" class="text-light bg-dark">Exam</a><br>
+				<br>
+				<a href="Question bank.html" class="text-light bg-dark">Question bank</a><br>
+				<br>
+
+				<a href="Help.html" class="text-light bg-dark">Help</a><br><br>
+				<a href="Contact.html" class="text-light bg-dark">Contact us</a></p><br><br>
+					
+				</div>
+				
+			</div>
+
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

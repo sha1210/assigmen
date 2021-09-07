@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RTO Question Bank</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="p-3 mb-2 text-light bg-dark row sticky-top" style="background-color: transparent;rgba(255,0,.4) ">
+				<div class="col">
+					<img src="data:image/jpeg;base64,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" class="mr-3 sm rounded-circle " style="width: 100px">Gujarat(english)
+
+				</div>
+				<div class=" row text-center" style="text-decoration: none;">
+					<div class="col">
+						<img src="E:\sem 3\assigment3\icon.png"></img><br>
+						<a href="Question bank.html">Question banks</a>
+					</div>
+					<div class="col">
+						<img src="icon3.png"><br>
+						<a href="Exam.html">Exam</a>
+					</div>
+					<div class="col">
+						<img src="icon2.png"><br>
+						<a href="Help.html">Help</a>
+					</div>
+				</div>
+			</div>
+
+			<p><h1> IMORTANT QUESTIONS</h1> </p>
+			<div>
+				<ol style="height: auto !important;">
+            <li>If you are near a pedestrian crossing and there are people waiting to cross the road, you should 
+
+               <ol>
+                  <li>Slow down, press horn and proceed</li>
+                  <li>Press horn and proceed</li>
+                  <li>
+                     <strong>Stop the vehicle, wait until pedestrians cross and then move forward</strong>
+                  </li>
+               </ol>
+            </li>
+            <li>You are coming towards a narrow bridge and another vehicle is about to enter the bridge from the other side. What should you do?
+
+               <ol>
+                  <li>
+                     <strong>Wait until the other vehicle crosses the bridge before proceeding</strong>
+                  </li>
+                  <li>Switch on headlight and the cross the bridge</li>
+                  <li>Increase speed of the vehicle and try to cross the bridge quickly</li>
+               </ol>
+            </li>
+            <li>In case you see a vehicle that has met with an accident with injured passengers inside, you should -
+
+               <ol>
+                  <li>Stop your vehicle and report the matter to the nearest police station</li>
+                  <li>Take the vehicle to the closest police station and report the accident</li>
+                  <li>
+                     <strong>Take measures to secure medical attention to those injured and report the accident to the closest police station within a period of 24 hours</strong>
+                  </li>
+               </ol>
+            </li>
+            <div class="col-md-12 link-section">
+      <p class="list-group-item list-group-orange">Also check :&nbsp;
+         <strong>
+            <a title="Driving Licence" target="_blank" href="/driving-licence.html">Driving Licence</a>
+         </strong>
+      </p>
+   </div>
+            <li>On a road that has been designated as one way
+
+               <ol>
+                  <li>
+                     <strong>You should not drive in reverse gear</strong>
+                  </li>
+                  <li>You should not overtake</li>
+                  <li>You should not park</li>
+               </ol>
+            </li>
+            <li>You can overtake a vehicle that is in the front 
+
+               <ol>
+                  <li>Through the left side of the vehicle ahead</li>
+                  <li>
+                     <strong>Through the right side of the vehicle ahead</strong>
+                  </li>
+                  <li>If the road is wide enough</li>
+               </ol>
+            </li>
+            <li>If a vehicle approaches a railway crossing that is not guarded and the vehicle wants to proceed, the driver should
+
+               <ol>
+                  <li>Wait until the train passes</li>
+                  <li>Press horn and cross the track at the earliest</li>
+                  <li>
+                     <strong>Stop the vehicle on left hand side of the road, approach the track and ensure that there is no train or trolley coming from any side prior to crossing.</strong>
+                  </li>
+               </ol>
+<style scoped="">
+.ct-img-web-banner{margin-bottom:10px}.ct-img-web-banner img{max-width:900px}.ct-img-web-banner .show-desktop{display:block}.ct-img-web-banner .show-mobile{display:none}@media only screen and (max-width:1024px){.ct-img-web-banner img{max-width:720px}}@media only screen and (max-width:767px){.ct-img-web-banner .show-desktop{display:none}.ct-img-web-banner .show-mobile{display:block}.ct-img-web-banner img{max-width:340px;margin:0 auto}}@media only screen and (max-width:320px){.ct-img-web-banner img{max-width:300px}}
+</style>
+<div class="ct-img-web-banner">
+<a href="/credit-score.html?variant=slide&amp;WT.mc_id=CROSS_SELL_IL_DRIVING_LICENCE&amp;utm_source=bb&amp;utm_medium=seo&amp;utm_campaign=CROSS_SELL_IL_DRIVING_LICENCE">
+<img src="/images/india/infographic/Web-In-line-CT-banner-driving-content01-desktop-1-img.gif" class="show-desktop" alt="Credit Score" title="Credit Score" width="596" height="80" loading="lazy">
+<img src="/images/india/infographic/Mobile-In-line-CT-banner-driving-content01-mobile-1-img.gif" class="show-mobile" alt="Credit Score" title="Credit Score" width="340" height="128" loading="lazy">
+</a>
+</div>
+
+
+            </li>
+            <li>Transport vehicles can be distinguished by 
+
+               <ol>
+                  <li>The colour of the vehicle</li>
+                  <li>
+                     <strong>Number plate of the vehicle</strong>
+                  </li>
+                  <li>Tyre size of the vehicle</li>
+               </ol>
+            </li>
+            <li>A learner’s license is valid for a period of 
+
+               <ol>
+                  <li>30 days</li>
+                  <li>
+                     <strong>6 months</strong>
+                  </li>
+                  <li>Until a driving licence is availed</li>
+               </ol>
+            </li>
+            <li>In case a road does not have a footpath, pedestrians will have to
+
+               <ol>
+                  <li>
+                     <strong>Walk on the right side of the road</strong>
+                  </li>
+                  <li>Walk on the left side of the road</li>
+                  <li>Walk on any side of the road</li>
+               </ol>
+            </li>
+            <li>Free passage should be provided to the following vehicles
+
+               <ol>
+                  <li>Express buses</li>
+                  <li>Police vehicles</li>
+                  <li>
+                     <strong>Fire service vehicles and ambulance</strong>
+                  </li>
+               </ol>
+            </li>
+            <li>Vehicles that come from the opposite side should be allowed to proceed through the 
+
+               <ol>
+                  <li>Left side</li>
+                  <li>
+                     <strong>Right side</strong>
+                  </li>
+                  <li>Any convenient side</li>
+               </ol>
+            </li>
+            <li>Driver of a vehicle can overtake when
+
+               <ol>
+                  <li>
+                     <strong>The driver of the vehicle ahead gives the signal to overtake</strong>
+                  </li>
+                  <li>Road is wide enough</li>
+                  <li>Driving down a hill</li>
+               </ol>
+            </li>
+            <li>Driver of a vehicle shall drive through the
+
+               <ol>
+                  <li>
+                     <strong>Left side of the road</strong>
+                  </li>
+                  <li>Right side of the road</li>
+                  <li>Center of the road</li>
+               </ol>
+            </li>
+            <li>If a vehicle is parked on the side of a road at night
+
+               <ol>
+                  <li>The vehicle should be locked</li>
+                  <li>Park light should remain on</li>
+                  <li>
+                     <strong>All of the above</strong>
+                  </li>
+               </ol>
+            </li>
+            <li>Fog lamps should be used when
+
+               <ol>
+                  <li>
+                     <strong>There is mist</strong>
+                  </li>
+                  <li>At night</li>
+                  <li>When the vehicle opposite is not using the dim light</li>
+               </ol>
+            </li>
+            <li>Zebra lines are meant for 
+
+               <ol>
+                  <li>
+                     <strong>Crossing of pedestrians</strong>
+                  </li>
+                  <li>Stopping vehicles</li>
+                  <li>Overtaking </li>
+               </ol>
+            </li>
+            <li>If an ambulance is approaching
+
+               <ol>
+                  <li>No preference should be given</li>
+                  <li>Provide passage if there are no vehicles on the other side</li>
+                  <li>
+                     <strong>Allow free passage by moving to the side of the road</strong>
+                  </li>
+               </ol>
+            </li>
+            <li>Red traffic light is an sign to
+
+               <ol>
+                  <li>Slow the vehicle</li>
+                  <li>
+                     <strong>Stop the vehicle</strong>
+                  </li>
+                  <li>Proceed with caution</li>
+               </ol>
+            </li>
+            <li>Parking in front of a hospital is
+
+               <ol>
+                  <li>
+                     <strong>Not correct</strong>
+                  </li>
+                  <li>Correct</li>
+                  <li>Depends on the situation</li>
+               </ol>
+            </li>
+            <li>If a driver sees the sign for ‘slippery road ahead’, he/she must
+
+               <ol>
+                  <li>Drive faster</li>
+                  <li>
+                     <strong>Change gear and reduce speed</strong>
+                  </li>
+                  <li>Apply brake but proceed in the same speed</li>
+               </ol>
+            </li>
+            <li>Overtaking is prohibited when
+
+               <ol>
+                  <li>Roads are slippery</li>
+                  <li>Poses danger to oncoming traffic</li>
+                  <li>
+                     <strong>All of the above</strong>
+                  </li>
+               </ol>
+            </li>
+            <li>Overtaking when the vehicle approaches a bend is
+
+               <ol>
+                  <li>
+                     <strong>Not allowed</strong>
+                  </li>
+                  <li>Allowed</li>
+                  <li>Allowed with caution</li>
+               </ol>
+            </li>
+            <li>Drunken driving is
+
+               <ol>
+                  <li>Allowed at night</li>
+                  <li>Allowed during the day</li>
+                  <li>
+                     <strong>Prohibited at all times</strong>
+                  </li>
+               </ol>
+            </li>
+            <li>Honking is prohibited near
+
+               <ol>
+                  <li>Places of religious worship such as Temple, Mosque and Churches</li>
+                  <li>
+                     <strong>Hospitals, Court of Law</strong>
+                  </li>
+                  <li>Near Police Stations</li>
+               </ol>
+            </li>
+            <li>Rear view mirror is utilized for
+
+               <ol>
+                  <li>
+                     <strong>Watching traffic that is approaching from behind</strong>
+                  </li>
+                  <li>Watching back seat passengers</li>
+                  <li>Car decor</li>
+               </ol>
+            </li>
+            <div class="col-md-12 link-section">
+   <p class="list-group-item list-group-orange">Also check :&nbsp;
+      <strong>
+         <a title="Driving Licence Renewal" target="_blank" href="/driving-licence/dl-renewal.html">Driving Licence Renewal</a>
+      </strong>
+   </p>
+</div>
+            <li>Boarding in and alighting from vehicles when it is in motion is
+
+               <ol>
+                  <li>Allowed in autos</li>
+                  <li>Allowed in buses</li>
+                  <li>
+                     <strong>Prohibited in all vehicles</strong>
+                  </li>
+               </ol>
+            </li>
+            <li>Mobile phones should not be used
+
+               <ol>
+                  <li>At home</li>
+                  <li>In office</li>
+                  <li>
+                     <strong>While driving a vehicle</strong>
+                  </li>
+               </ol>
+            </li>
+            <li>Overtaking is not allowed when
+
+               <ol>
+                  <li>When the road is wide enough</li>
+                  <li>
+                     <strong>When the road ahead is not visible clearly</strong>
+                  </li>
+                  <li>The road has no potholes</li>
+               </ol>
+            </li>
+            <li>Pedestrians are not allowed to cross the road close to stopped vehicles or near sharp bends because
+
+               <ol>
+                  <li>It is an inconvenience to oncoming vehicles</li>
+                  <li>It is inconvenient to other pedestrians</li>
+                  <li>
+                     <strong>Drivers of approaching vehicles may not be able to see them</strong>
+                  </li>
+               </ol>
+            </li>
+            <div class="clearfix"></div>
+            <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Driving-Licence_SEO_Rsp -->
+            <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-3557509211955107" data-ad-slot="1959925720" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_0_expand" style="border: none; height: 280px; width: 886px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_0_anchor" style="border: none; height: 280px; width: 886px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:886px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="886" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-3557509211955107&amp;output=html&amp;h=280&amp;slotname=1959925720&amp;adk=3473524715&amp;adf=1577480886&amp;pi=t.ma~as.1959925720&amp;w=886&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1630987237&amp;rafmt=1&amp;psa=0&amp;format=886x280&amp;url=https%3A%2F%2Fwww.bankbazaar.com%2Fdriving-licence%2Flearning-licence-test-questions.html&amp;flash=0&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;adsid=ChEI8PjWiQYQ2YORiIyUgeSEARI5AK7B_1d-y0Ld5hcJjX-L1ZYcanHmKsqr-oyHxzRCA4hCbue_69CWcUHKNbtQa3u-oHNsgJMbJ1l1&amp;uach=WyJXaW5kb3dzIiwiNi4xLjAiLCJ4ODYiLCIiLCI5My4wLjQ1NzcuNjMiLFtdLG51bGwsbnVsbCwiMzIiXQ..&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hdHRlc3RhdGlvbi5hbmRyb2lkLmNvbSIsInN0YXRlIjo3fV0.&amp;dt=1630987216441&amp;bpp=12&amp;bdt=5243&amp;idt=3858&amp;shv=r20210831&amp;mjsv=m202109010101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D35790beda69e056b-22416ba08dcb00ff%3AT%3D1630987222%3ART%3D1630987222%3AS%3DALNI_MabvwaAbQKmX10g1Dkz8VMESSplDg&amp;prev_fmts=120x600%2C120x600%2C0x0&amp;nras=1&amp;correlator=378489988430&amp;frm=20&amp;pv=1&amp;ga_vid=1003813486.1630987220&amp;ga_sid=1630987220&amp;ga_hid=1983028533&amp;ga_fc=0&amp;u_tz=330&amp;u_his=9&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=398&amp;ady=4199&amp;biw=1349&amp;bih=625&amp;scr_x=0&amp;scr_y=1700&amp;eid=42530672%2C21066433%2C44748552%2C21067496%2C31062297&amp;oid=3&amp;psts=AGkb-H-DJnn4WSm439FFEV9y-jmZH2_czbzYFE-v14WUS47aEre3-J9inSomgpjBGpzmlAtNgnf-bJjKvCs&amp;pvsid=4224953102780532&amp;pem=757&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;eae=0&amp;fc=896&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C625&amp;vis=1&amp;rsz=o%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;btvi=1&amp;fsb=1&amp;xpc=8hn228fszW&amp;p=https%3A//www.bankbazaar.com&amp;dtd=20614" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" allow="attribution-reporting" data-google-container-id="a!1" data-google-query-id="CNLcoPj86_ICFVRNfAodT6ICrw" data-load-complete="true"></iframe></ins></ins></ins>
+            <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            <div class="clearfix"></div>
+            <li>Records needed for private vehicles are 
+
+               <ol>
+                  <li>G.C.R, Insurance Certificate, Registration Certificate</li>
+                  <li>
+                     <strong>Insurance Certificate, Registration Certificate, Driving License and Tax Token</strong>
+                  </li>
+                  <li>Permit, Trip Sheet, Registration Certificate</li>
+               </ol>
+            </li>
+            <li>Validity of Pollution Under Control Certificate is
+
+               <ol>
+                  <li>1 year</li>
+                  <li>
+                     <strong>6 months</strong>
+                  </li>
+                  <li>2 years</li>
+               </ol>
+            </li>
+            <li>Minimum age for availing a license to drive a motor vehicle without gear is
+
+               <ol>
+                  <li>
+                     <strong>16 years</strong>
+                  </li>
+                  <li>21 years</li>
+                  <li>18 years</li>
+               </ol>
+            </li>
+            <li>When you see the sign for ‘School nearby’, you should
+
+               <ol>
+                  <li>
+                     <strong>Slow down and go ahead with caution</strong>
+                  </li>
+                  <li>Press horn and proceed in the same speed</li>
+                  <li>Stop the vehicle</li>
+               </ol>
+            </li>
+            <li>If a driver of a two wheeler is turning to the left, he/she should
+
+               <ol>
+                  <li>
+                     <strong>Extend the right hand and give the left turn signal</strong>
+                  </li>
+                  <li>Not give any signal</li>
+                  <li>Extend the left hand and give the left turn signal</li>
+               </ol>
+            </li>
+            <li>One time tax for a new car is
+
+               <ol>
+                  <li>5 years</li>
+                  <li>
+                     <strong>15 years</strong>
+                  </li>
+                  <li>Until registration is cancelled</li>
+               </ol>
+            </li>
+            <li>Prior to overtaking a vehicle, driver should ensure that
+
+               <ol>
+                  <li>
+                     <strong>The road ahead is visible clearly and is safe to overtake</strong>
+                  </li>
+                  <li>There are no vehicles ahead</li>
+                  <li>The road is not safe</li>
+               </ol>
+            </li>
+            <li>Parking is prohibited on
+
+               <ol>
+                  <li>
+                     <strong>A foot path</strong>
+                  </li>
+                  <li>On a one-way road</li>
+                  <li>On a main road</li>
+               </ol>
+            </li>
+            <li>Hand brake should be used to
+
+               <ol>
+                  <li>
+                     <strong>Park a vehicle</strong>
+                  </li>
+                  <li>Apply brake suddenly</li>
+                  <li>Reduce speed</li>
+               </ol>
+            </li>
+            <li>Using unregistered vehicles in public spaces is
+
+               <ol>
+                  <li>
+                     <strong>Illegal</strong>
+                  </li>
+                  <li>Legal</li>
+                  <li>Legal if necessary</li>
+               </ol>
+            </li>
+            <li>Minimum age to avail driving license for transport vehicles is
+
+               <ol>
+                  <li>16 years</li>
+                  <li>
+                     <strong>20 years</strong>
+                  </li>
+                  <li>45 years</li>
+               </ol>
+            </li>
+         </ol>
+			</div>
+
+			<div>
+				<h2><b>List of traffic signs&nbsp;</b></h2>
+				<p>You will also need to understand the meaning of a few traffic signs, which may be asked by the <a href="https://www.bajajfinservmarkets.in/insurance/motor-insurance/rto.html">RTO</a> as a part of RTO exam test questions.&nbsp;</p>
+				<p>Here are a few:</p>
+				<p style="text-align: center;"><img src="img6.webp" width="450" height="463"></p>
+				<p>Once you successfully clear your learner’s licence test, you can then apply to get a driver’s licence. Under the latest rules, you would be fined Rs. 5,000 for driving without a licence. It is, thus, crucial to pass your learner’s licence test to secure a valid permanent licence for the future.&nbsp;</p>
+				<p>While the fines for driving without a licence are quite high, so are the fines for driving without an insurance policy. You would be fined Rs. 2,000 for driving without an insurance policy. Thus, to stay safe and financially secure on Indian roads, it is important to opt for vehicle insurance.&nbsp; You can consider the Motor insurance policy available on Finserv MARKETS for your two-wheeler or your car.&nbsp;</p>
+				<p>The <a href="https://www.bajajfinservmarkets.in/insurance/motor-insurance.html">motor insurance</a> policy on Finserv MARKETS covers any damage to your two-wheeler or car arising out of any natural or man-made causes, such as thefts or accidents and even provides third party liability coverage. Cashless claim facilities at over 4000 garages in every part of India are also available with the car insurance plan. The policy also comes with quick claim settlements and round the clock assistance. Secure your bike or car today and drive worry-free.</p>
+			</div>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="p-3 mb-2 text-light bg-dark row" style="background-color: black">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div class="col" style="margin: 60px">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					&copyRto2021;
+					<p> 
+					This test is only for public awareness.
+					User is adviced to check every information by transpotarion organisation. 
+					</p>
+				</div>
+				<div class="col text-right" style="margin: 60px">
+				<br>
+				<br>
+				<p><a href="home.html"class="text-light bg-dark">Home</a><br>
+					<br>
+				<a href="Exam.html" class="text-light bg-dark">Exam</a><br>
+				<br>
+				<a href="Question bank.html" class="text-light bg-dark">Question bank</a><br>
+				<br>
+
+				<a href="Help.html" class="text-light bg-dark">Help</a><br><br>
+				<a href="Contact.html" class="text-light bg-dark">Contact us</a></p><br><br>
+					
+				</div>
+				
+			</div>
+
+
+
+
+
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
